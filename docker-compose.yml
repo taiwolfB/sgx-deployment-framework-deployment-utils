@@ -3,10 +3,10 @@ version: "3"
 services:
     backend:
         build:
-          context: ./sgx-deployment-framework-backend
+          context: ../sgx-deployment-framework-backend
           dockerfile: ./Dockerfile
-        # image: sgx-deployment-framework-backend-sgx-service-provider:latest
-        image: acrtestbodo.azurecr.io/sgx-deployment-framework-backend-sgx-service-provider:latest
+        image: sgx-deployment-framework-backend-sgx-service-provider:latest
+        # image: acrtestbodo.azurecr.io/sgx-deployment-framework-backend-sgx-service-provider:latest
         container_name: sgx-deployment-framework-backend-sgx-service-provider
         restart: on-failure
         env_file: ./.env
@@ -17,10 +17,10 @@ services:
             - SGX_FRAMEWORK
     frontend:
         build:
-          context: ./sgx-deployment-framework-frontend
+          context: ../sgx-deployment-framework-frontend
           dockerfile: ./Dockerfile
-        # image: sgx-deployment-framework-frontend:latest
-        image: acrtestbodo.azurecr.io/sgx-deployment-framework-frontend:latest
+        image: sgx-deploymensst-framework-frontend:latest
+        # image: acrtestbodo.azurecr.io/sgx-deployment-framework-frontend:latest
         container_name: sgx-deployment-framework-frontend
         env_file: ./.env
         depends_on: 

@@ -4,7 +4,7 @@ username="azureuser"
 password="bogdan_tailup_sgx_thesis@2023"
 location="westus"
 
-resourceGroup="bogdanTailupThesisFrameworkResourceGroup1"
+resourceGroup="bogdanTailupThesisFrameworkResourceGroup"
 
 vnetAddressSpace="10.0.0.0/16"
 vnetName="bogdanTailupThesisFrameworkVnet"
@@ -20,7 +20,6 @@ publicIpVersion="IPv4"
 networkSecurityGroupName="bogdanTailupThesisFrameworkNSG"
 
 networkSecurityRuleInbound="bogdanTailupThesisFrameworkInboundRule"
-networkSecurityRuleInbound="bogdanTailupThesisFrameworkOutboundRule"
 networkSecurityRuleInboundAccess="Allow"
 networkSecurityRuleInboundDirection="Inbound"
 networkSecurityRuleInboundPriority="100"

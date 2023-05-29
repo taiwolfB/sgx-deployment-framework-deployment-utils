@@ -1,5 +1,6 @@
 #!/bin/bash
 
+cd $HOME
 mkdir azure_deployment
 cd azure_deployment
 
@@ -24,4 +25,4 @@ echo $FRONTEND_HOST_VAR >> .env
 
 sudo cp ./.env ./sgx-deployment-framework-frontend
 
-sudo docker-compose up -d 
+sudo docker-compose build && sudo docker-compose up -d 
