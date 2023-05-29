@@ -25,4 +25,6 @@ echo $FRONTEND_HOST_VAR >> .env
 
 sudo cp ./.env ./sgx-deployment-framework-frontend
 
+cd sgx-deployment-framework-deployment-utils
+
 sudo docker-compose build && sudo docker-compose up -d 
