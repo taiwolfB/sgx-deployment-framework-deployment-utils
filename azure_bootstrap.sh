@@ -12,9 +12,9 @@ git clone https://github.com/taiwolfB/sgx-deployment-framework-backend.git
 git clone https://github.com/taiwolfB/sgx-deployment-framework-deployment-utils.git
 
 
-sudo cp -r ./sgx-deployment-framework-remote-attestation ./sgx-deployment-framework-backend
-sudo cp ./sgx-deployment-framework-deployment-utils/docker-compose.yml ./
-sudo cp ./sgx-deployment-framework-deployment-utils/.env ./
+
+# sudo cp ./sgx-deployment-framework-deployment-utils/docker-compose.yml ./
+# sudo cp ./sgx-deployment-framework-deployment-utils/.env ./
 
 export MACHINE_IP=$(curl ifconfig.me/ip)
 
@@ -23,6 +23,7 @@ export FRONTEND_HOST_VAR="FRONTEND_HOST=$MACHINE_IP"
 echo $REACT_APP_VAR >> .env
 echo $FRONTEND_HOST_VAR >> .env
 
+sudo cp -r ./sgx-deployment-framework-remote-attestation ./sgx-deployment-framework-backend
 sudo cp ./.env ./sgx-deployment-framework-frontend
 
 cd sgx-deployment-framework-deployment-utils
